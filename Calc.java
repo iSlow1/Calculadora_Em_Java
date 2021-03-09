@@ -33,7 +33,7 @@ public class Calculadora {
 	
 	public static void divisao(Double n1, Double n2) {
 		
-		Double divisao = n1 * n2;
+		Double divisao = n1 / n2;
 		System.out.println("Divisao: " + divisao);	
 	}
 	
