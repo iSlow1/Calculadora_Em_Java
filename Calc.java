@@ -1,41 +1,55 @@
-package aula08032021;
+import java.util.Scanner;
 
 public class Calculadora {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
+		Scanner le = new Scanner(System.in);
 		
-		Calculadora.soma(5.3, 4.7);
-		Calculadora.subtracao(5.0, 4.0);
-		Calculadora.multiplicacao(4.8, 8.9);
-		Calculadora.divisao(6.2, 3.6);
-
+		System.out.println("Digite o primeiro número inteiro");
+		Integer numero1 = le.nextInt();
+		System.out.println("Digite o segundo número inteiro");
+		Integer numero2 = le.nextInt();
+		
+		le.close();
+		
+		Integer soma = soma(numero1, numero2);
+		Integer sub = sub(numero1, numero2);
+		Integer mult = mult(numero1, numero2);
+		Integer div = div(numero1, numero2);
+		
+		System.out.println(numero1 + " + " + numero2 + " = " + soma);
+		System.out.println(numero1 + " - " + numero2 + " = " + sub);
+		System.out.println(numero1 + " * " + numero2 + " = " + mult);
+		System.out.println(numero1 + " / " + numero2 + " = " + div);
 	}
 	
-	
-	public static void soma(Double n1, Double n2) {
+	public static Integer soma(Integer n1, Integer n2) {
 		
-		Double soma = n1 + n2;
-		System.out.println("Soma: " + soma);	
+		return n1 + n2;
+		
+		
 	}
 	
-	public static void subtracao(Double n1, Double n2) {
+	public static Integer sub(Integer n1, Integer n2) {
 		
-		Double subtracao = n1 - n2;
-		System.out.println("Subtracao: " + subtracao);	
+		return n1 - n2;
+		
+		
 	}
 	
-	public static void multiplicacao(Double n1, Double n2) {
+	public static Integer mult(Integer n1, Integer n2) {
 		
-		Double multiplicacao = n1 * n2;
-		System.out.println("Multiplicacao: " + multiplicacao );	
+		return n1 * n2;
+		
+		
 	}
 	
-	public static void divisao(Double n1, Double n2) {
+	public static Integer div(Integer n1, Integer n2) {
 		
-		Double divisao = n1 / n2;
-		System.out.println("Divisao: " + divisao);	
+		return n1 / n2;
+		
+		
 	}
-	
-
 }
